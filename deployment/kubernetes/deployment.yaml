@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mendix-app
+  name: dummy-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mendix
+      app: dummy-app
   template:
     metadata:
       labels:
-        app: mendix
+        app: dummy-app
     spec:
       containers:
-      - name: mendix
-        image: your-docker-repo/mendix-app:latest
+      - name: dummy-app
+        image: nabilwics/dummy-app:latest  
         ports:
         - containerPort: 8080
