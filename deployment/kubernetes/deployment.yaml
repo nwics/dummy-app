@@ -16,4 +16,4 @@ spec:
       - name: dummy-app
         image: nabilwics/dummy-app:latest  
         ports:
-        - containerPort: 8080
+        - containerPort: 80
