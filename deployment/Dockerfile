@@ -1,2 +1,4 @@
-FROM mendix/mendix-buildpack:latest
-COPY src/dummy_app.mpk /opt/app/mendix.mpk
+FROM nginx:alpine
+COPY src/ /usr/share/nginx/html/
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
