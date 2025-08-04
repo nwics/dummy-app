@@ -9,7 +9,7 @@ pipeline {
     stage('Build Docker Image') {
       steps {
         script {
-          bat 'docker build -t %DOCKER_IMAGE% ./deployment'
+          bat 'docker build -t %DOCKER_IMAGE% -f deployment/Dockerfile .'
         }
       }
     }
