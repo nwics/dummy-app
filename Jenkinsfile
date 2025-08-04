@@ -2,6 +2,7 @@ pipeline {
   agent any
   environment {
     DOCKER_IMAGE = 'nabilwics/dummy-app'
+    SKIP_K8S_DEPLOY = 'true'
   }
   stages {
     stage('Build Docker Image') {
