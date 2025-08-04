@@ -19,8 +19,8 @@ pipeline {
           usernameVariable: 'DOCKER_USER',         // Nama variable untuk username
           passwordVariable: 'DOCKER_PASS'          // Nama variable untuk password
         )]) {
-          echo %DOCKER_PASS% | docker login -u %DOCKER_USER% --password-stdin
-          bat 'docker push $DOCKER_IMAGE'
+          bat 'echo %DOCKER_PASS% | docker login -u %DOCKER_USER% --password-stdin'
+          bat 'docker push %DOCKER_IMAGE%'
         }
       }
     }
