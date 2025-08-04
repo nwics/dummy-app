@@ -1,4 +1,4 @@
 FROM nginx:alpine
-COPY docker build -t nabilwics/dummy-app -f deployment/Dockerfile .
+COPY src/dummy_app.mpk /usr/share/nginx/html/mendix.mpk
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
